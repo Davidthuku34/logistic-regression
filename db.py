@@ -6,10 +6,10 @@ from urllib.parse import urlparse
 
 # Render Database Configuration for "machine learning" database
 RENDER_DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'dpg-d2ceec1r0fns73dss5ug-a'),
-    'database': os.getenv('DB_NAME', 'machinelearning_database'),  # Your database name
-    'user': os.getenv('DB_USER', 'machinelearning_database_user'),
-    'password': os.getenv('DB_PASSWORD', '5KZU7b4VLJRo5aTU0AaqFVlta2KEMinB'),
+    'host': os.getenv('DB_HOST', 'dpg-d3j7s58gjchc73fba250-a'),
+    'database': os.getenv('DB_NAME', 'david_w44b'),  # Your database name
+    'user': os.getenv('DB_USER', 'david_w44b_user'),
+    'password': os.getenv('DB_PASSWORD', 'jkakzOqfHzG50vT8W0vggxmNpNEbPEZf'),
     'port': os.getenv('DB_PORT', '5432')
 }
 
