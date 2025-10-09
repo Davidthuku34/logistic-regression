@@ -24,9 +24,33 @@
       </nav>
     </div>
   </header>
+  
+  <!-- Research Alert -->
+  <div class="research-alert">
+    Please note: This platform is provided for academic research purposes only.
+  </div>
+
+  <!-- Consent Section -->
+  <section class="consent-section">
+    <h2>User Consent</h2>
+    <p>
+      Before proceeding, please review the following:
+      <br /><br />
+      By using this platform, you acknowledge that the data you provide will be used solely for academic research and development purposes. No data will be shared with third parties without your explicit consent.
+    </p>
+    <form id="consent-form">
+      <div class="form-group">
+        <input type="checkbox" id="consent" required />
+        <label for="consent">I have read and agree to the above terms.</label>
+      </div>
+      <div style="text-align: center; margin-top: 1rem;">
+        <button type="button" class="predict-btn" id="consent-btn" onclick="acceptConsent()">I Agree</button>
+      </div>
+    </form>
+  </section>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content" style="display: none;">
     <div class="container">
       <!-- Hero Section -->
       <section class="hero" id="home">
@@ -82,6 +106,14 @@
           <button type="submit" class="predict-btn">Predict Gene Expression</button>
         </form>
       </section>
+
+      <!-- How the System Works Section -->
+      <section class="how-it-works">
+        <h2>How the System Works</h2>
+        <p>
+          When you enter your gene expression values and submit the form, our system processes the data using a pre-trained machine learning model. The model analyzes the input and predicts the gene expression outcome based on patterns discovered from historical academic research data. The results are then displayed immediately on the screen. Your inputs remain confidential and are used strictly for research purposes.
+        </p>
+      </section>
     </div>
   </main>
 
@@ -133,11 +165,22 @@
 
     <div class="footer-bottom">
       <p>&copy; 2024 GenePredict. All rights reserved. | For Academic Use Only | David Gana - 0724152484</p>
-      <p> Research project supervised by DR Consolata Gakii and DR Faith Mueni </P>
+      <p>Research project supervised by DR Consolata Gakii and DR Faith Mueni</p>
     </div>
   </footer>
 
   <script>
+    // Consent handling
+    function acceptConsent() {
+      const consentCheckbox = document.getElementById('consent');
+      if(consentCheckbox.checked) {
+        document.getElementById('main-content').style.display = 'block';
+        document.querySelector('.consent-section').style.display = 'none';
+      } else {
+        alert('Please provide your consent to continue.');
+      }
+    }
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

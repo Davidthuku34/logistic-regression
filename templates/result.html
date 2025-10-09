@@ -54,11 +54,26 @@
           Predicted Outcome: {{ prediction }}
         </div>
 
-        <div style="text-align: center;">
+        <div style="text-align: center; margin-bottom: 2rem;">
           <a href="{{ url_for('index') }}" class="predict-btn" style="padding: 1rem 3rem; font-size: 1.1rem;">
             Predict Again
           </a>
         </div>
+
+        <!-- Feedback Form Section -->
+        <section class="feedback-section" style="background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); margin-top: 2rem;">
+          <h2 style="text-align: center; margin-bottom: 1rem;">We Value Your Feedback</h2>
+          <p style="text-align: center; margin-bottom: 1.5rem;">Please share your thoughts or suggestions about your prediction experience below:</p>
+          <form action="mailto:ganadavidthuku@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label for="feedback" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 600;">Your Feedback:</label>
+              <textarea id="feedback" name="feedback" rows="4" style="width:100%; padding: 12px 15px; border: 2px solid #e1e8ed; border-radius: 8px; font-size: 1rem; transition: all 0.3s ease; background-color: #fafafa;" required></textarea>
+            </div>
+            <div style="text-align: center;">
+              <button type="submit" class="predict-btn" style="padding: 1rem 3rem; font-size: 1.1rem;">Send Feedback</button>
+            </div>
+          </form>
+        </section>
       </section>
     </div>
   </main>
@@ -85,26 +100,23 @@
 
       <section class="footer-section social">
         <h3>Follow Us</h3>
-  <div class="social-icons">
-  <a href="#" class="social-icon facebook" title="Facebook" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="#" class="social-icon twitter" title="Twitter" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-  <a href="#" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="#" class="social-icon researchgate" title="ResearchGate" aria-label="ResearchGate">
-    <i class="fab fa-researchgate"></i>
-  </a>
-  <a href="#" class="social-icon github" title="GitHub" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
-
-
-
+        <div class="social-icons">
+          <a href="#" class="social-icon facebook" title="Facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon twitter" title="Twitter" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-icon researchgate" title="ResearchGate" aria-label="ResearchGate">
+            <i class="fab fa-researchgate"></i>
+          </a>
+          <a href="#" class="social-icon github" title="GitHub" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </section>
     </div>
 
@@ -125,9 +137,5 @@
       });
     });
   </script>
-</body>
-</html>
-
-
 </body>
 </html>
