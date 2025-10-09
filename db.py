@@ -6,19 +6,19 @@ from urllib.parse import urlparse
 
 # Render Database Configuration for "machine learning" database
 RENDER_DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'dpg-d3j7s58gjchc73fba250-a'),
-    'database': os.getenv('DB_NAME', 'david_w44b'),  # Your database name
-    'user': os.getenv('DB_USER', 'david_w44b_user'),
-    'password': os.getenv('DB_PASSWORD', 'jkakzOqfHzG50vT8W0vggxmNpNEbPEZf'),
+    'host': os.getenv('DB_HOST', 'dpg-d3jt9rm3jp1c73aj5g1g-a'),
+    'database': os.getenv('DB_NAME', 'david_qqd7'),  # Your database name
+    'user': os.getenv('DB_USER', 'david_qqd7_user'),
+    'password': os.getenv('DB_PASSWORD', '9HTJrak7tr5H1Or00thypxCgwnmBMpo8'),
     'port': os.getenv('DB_PORT', '5432')
 }
 
 # Render typically provides DATABASE_URL environment variable
 DATABASE_URL = os.getenv('DATABASE_URL')
-#postgresql://david_w44b_user:jkakzOqfHzG50vT8W0vggxmNpNEbPEZf@dpg-d3j7s58gjchc73fba250-a.oregon-postgres.render.com/david_w44b
+#postgresql://david_qqd7_user:9HTJrak7tr5H1Or00thypxCgwnmBMpo8@dpg-d3jt9rm3jp1c73aj5g1g-a.oregon-postgres.render.com/david_qqd7
 
 # SQLite fallback for local development
-SQLITE_DB = 'machine_learning.database'
+SQLITE_DB = 'david_qqd7'
 
 def create_sqlite_table():
     """Create SQLite table if it doesn't exist (fallback)"""
